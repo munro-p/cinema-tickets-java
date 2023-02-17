@@ -23,7 +23,16 @@ public class TicketTypeRequest {
     }
 
     public enum Type {
-        ADULT, CHILD , INFANT
+        ADULT(20),
+        CHILD(10),
+        // ...
+        INFANT(0);
+
+        public final int cost;
+
+        Type(int cost) {
+            this.cost = cost;
+        }
     }
 
 }
